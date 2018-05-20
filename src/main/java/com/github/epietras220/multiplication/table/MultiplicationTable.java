@@ -4,7 +4,17 @@ import java.util.Formatter;
 
 public class MultiplicationTable {
 
-    public void multiplicationTable10() { // zad. 1.1
+    private int[][] table;
+
+    public MultiplicationTable(int n) {
+        //zainicjalizowac table i wypelnic odpowiednimi wartosciami
+
+    }
+    public int multiple(int x, int y){
+        return table[x][y]; // walidacja x i y
+    }
+
+    public static void multiplicationTable10() { // zad. 1.1
         int count = 0;
         for (int i = 1; i <= 10; i++) {
             for (int j = 1; j <= 10; j++) {
@@ -12,20 +22,20 @@ public class MultiplicationTable {
                 count++;
                 System.out.format("%4s|", result);
                 if (count == 10) {
-                    System.out.println("");
+                    System.out.println();
                     count = 0;
                 }
             }
         }
     }
 
-    public void multiplicationTable(int n) { // zad 1.2
+    public static void multiplicationTable(int n) { // zad 1.2
         int count = 0;
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= n; j++) {
                 int result = i * j;
                 count++;
-                System.out.format("%5s|", result);
+                System.out.format("%"+(int)(Math.log10(n*n)+1)+"s|", result);
                 if (count == n) {
                     System.out.println("");
                     count = 0;

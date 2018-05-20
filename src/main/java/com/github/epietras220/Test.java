@@ -1,11 +1,32 @@
 package com.github.epietras220;
 
+import com.github.epietras220.arithmetic.Arithmetic;
 import com.github.epietras220.change.Change;
+import com.github.epietras220.leap.years.LeapYears;
 import com.github.epietras220.multiplication.table.MultiplicationTable;
+
+import java.time.Duration;
+import java.time.Instant;
+import java.time.LocalDate;
+import java.util.Date;
 
 public class Test {
 
     public static void main(String[] args) {
+        Arithmetic arithmetic = new Arithmetic();
+        System.out.println(arithmetic.inequality());
+        //MultiplicationTable multiplicationTable = new MultiplicationTable();
+       // multiplicationTable.multiplicationTable(6);
+//        Change change = new Change();
+//        change.change(40);
+
+//        LeapYears leapYears = new LeapYears();
+//////        leapYears.daysBetween();
+////        System.out.println(leapYears.leapYear(1500)); //- ZWRACA TRUE - DLACZEGO?, JAK SPRAWDZIĆ JAK TA METODA WYGLĄDA
+////LocalDate data = LocalDate.of(1500,2,2);
+////        System.out.println(data.isLeapYear());
+
+
 
 //        int suma=0;
 //
