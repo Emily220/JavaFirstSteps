@@ -16,14 +16,14 @@ public class Arithmetic {
         return result;
     }
 
-    public double inequality(double n) { // zad 4.1 - źle zrobione!
+    public int inequality() { // zad 4.1 - źle zrobione!
         double suma = 1;
-        for (double i = 2; i <= 100000; i++) {
-            if (suma <= 10.0) {
-                suma = suma + (1 / i);
-            }
+        int i = 2;
+        while (suma <= 10) {
+            suma = suma + (1 / i);
+            i++;
 
         }
-        return suma;
+        return i;
     }
 }

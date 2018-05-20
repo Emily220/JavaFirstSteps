@@ -1,6 +1,7 @@
 package com.github.epietras220.leap.years;
 
 import java.time.LocalDate;
+import java.util.Calendar;
 import java.util.GregorianCalendar;
 
 public class LeapYears {
@@ -10,6 +11,11 @@ public class LeapYears {
         }
         return false;
         // System.out.println(data.isLeapYear(1500)); - ZWRACA TRUE - DLACZEGO?, JAK SPRAWDZIĆ JAK TA METODA WYGLĄDA
+    }
+    public long daysBetween(Calendar startDate, Calendar endDate){
+        long diff = endDate.getTimeInMillis() - startDate.getTimeInMillis();
+
+        return (diff/(1000*60*60*24));
     }
 
     GregorianCalendar data = new GregorianCalendar();
