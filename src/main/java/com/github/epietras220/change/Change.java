@@ -4,10 +4,11 @@ public class Change {
     public void change(int n) { // zad. 2.1
         int[] denomination = {500, 200, 100, 50, 20, 10, 5, 2, 1};
         for (int i : denomination) {
-            // for (int i = 0; i < denomination.length; i++) {
-            if (denomination[i] <= n) {
-                System.out.println(denomination[i]);
-                n = n - denomination[i];
+            {
+                if (denomination[i] <= n) {
+                    System.out.println(denomination[i]);
+                    n = n - denomination[i];
+                }
             }
         }
     }
@@ -21,5 +22,7 @@ public class Change {
         private Denomination(int v) { // konstruktor
             this.value = v;
         }
+
+
     }
 }

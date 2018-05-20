@@ -1,70 +1,48 @@
 package com.github.epietras220;
 
+import com.github.epietras220.change.Change;
+import com.github.epietras220.multiplication.table.MultiplicationTable;
 
 public class Test {
 
-
     public static void main(String[] args) {
 
-        int suma=0;
-
-        String liczbaRzymska = "MCCIX";
-        char[] lista = liczbaRzymska.toCharArray();
-
-        for ( int i =0; i<lista.length; i++){
-            while (lista[i]=='M'){
-                suma = suma+1000;
-            } while(lista[i]=='D'){
-                suma = suma+500;
-            } while(lista[i] =='C'){
-                if (lista[i+1] == 'D'){
-                    suma = suma+400;
-                }
-                suma = suma+100;
-            } while (lista[i]=='L'){
-                suma = suma +50;
-            } while(lista[i]=='X') {
-                if (lista[i + 1] == 'C') {
-                    suma = suma + 90;
-                } else if (lista[i + 1] == 'L') {
-                    suma = suma + 40;
-                }
-                suma = suma + 10;
-            } while(lista[i] =='V'){
-                suma = suma +5;
-            } while (lista[i]=='I'){
-                if (lista[i+1]=='V'){
-                    suma=suma+4;
-                } else if (lista[i+1]=='X'){
-                    suma=suma+9;
-                }
-                suma=suma+1;
-            }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//        int suma=0;
+//
+//        String liczbaRzymska = "MCCIX";
+//        char[] lista = liczbaRzymska.toCharArray();
+//
+//        for ( int i =0; i<lista.length; i++){
+//            while (lista[i]=='M'){
+//                suma = suma+1000;
+//            } while(lista[i]=='D'){
+//                suma = suma+500;
+//            } while(lista[i] =='C'){
+//                if (lista[i+1] == 'D'){
+//                    suma = suma+400;
+//                }
+//                suma = suma+100;
+//            } while (lista[i]=='L'){
+//                suma = suma +50;
+//            } while(lista[i]=='X') {
+//                if (lista[i + 1] == 'C') {
+//                    suma = suma + 90;
+//                } else if (lista[i + 1] == 'L') {
+//                    suma = suma + 40;
+//                }
+//                suma = suma + 10;
+//            } while(lista[i] =='V'){
+//                suma = suma +5;
+//            } while (lista[i]=='I'){
+//                if (lista[i+1]=='V'){
+//                    suma=suma+4;
+//                } else if (lista[i+1]=='X'){
+//                    suma=suma+9;
+//                }
+//                suma=suma+1;
+//            }
+//
+//
 //        int liczba = 234;
 //        char jeden ='I';
 //        char piec = 'V';
@@ -87,16 +65,12 @@ public class Test {
 //                System.out.print(jeden*3);
 //            case 4:
 //                System.out.print(jeden+piec);
-
-
-            }
-        System.out.println(suma);
-
-
-        }
-
-
+//
+//    }
+//        System.out.println(suma);
     }
+}
+
 
 
 
