@@ -10,16 +10,19 @@ public class LeapYears {
             return true;
         }
         return false;
-        // System.out.println(data.isLeapYear(1500)); - ZWRACA TRUE - DLACZEGO?, JAK SPRAWDZIĆ JAK TA METODA WYGLĄDA
-    }
-    public long daysBetween(Calendar startDate, Calendar endDate){
-        long diff = endDate.getTimeInMillis() - startDate.getTimeInMillis();
-
-        return (diff/(1000*60*60*24));
     }
 
-    GregorianCalendar data = new GregorianCalendar();
-    LocalDate data2 = LocalDate.of(1,1,1);
-    LocalDate dataNow = LocalDate.now();
+    public long daysBetween(Calendar startDate, Calendar endDate) {
+
+        long diff = Math.abs(endDate.getTimeInMillis()) - Math.abs(startDate.getTimeInMillis()); // wartość bewzględna dla dat p.n.e.
+
+        Calendar result = Calendar.getInstance();
+        result.setTimeInMillis(diff);
+        long liczbaMsWDobie = 1000 * 60 * 60 * 24;
+        long liczbaDni = result.getTimeInMillis() / liczbaMsWDobie;
+
+        return liczbaDni;
+    }
+
 
 }

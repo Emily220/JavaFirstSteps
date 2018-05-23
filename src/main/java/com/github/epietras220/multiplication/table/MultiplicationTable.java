@@ -4,13 +4,21 @@ import java.util.Formatter;
 
 public class MultiplicationTable {
 
+    public MultiplicationTable(int[][] table) {
+        this.table = table;
+        multiple(5,5);
+    }
+
     private int[][] table;
 
-    public MultiplicationTable(int n) {
-        //zainicjalizowac table i wypelnic odpowiednimi wartosciami
+    public MultiplicationTable() {
 
     }
+    //zainicjalizowac table i wypelnic odpowiednimi wartosciami
+
     public int multiple(int x, int y){
+
+
         return table[x][y]; // walidacja x i y
     }
 
