@@ -4,9 +4,10 @@ import java.util.EnumMap;
 
 public class Change {
 
-    EnumMap<Denomination, Integer> mapa = new EnumMap<Denomination, Integer>(Denomination.class);
 
-    public void change(int n) { // zad. 2.1
+
+    public EnumMap<Denomination, Integer> change(int n) { // zad. 2
+        EnumMap<Denomination, Integer> map = new EnumMap<Denomination, Integer>(Denomination.class);
         Denomination[] d = Denomination.values();
         //int[] denomination = {500, 200, 100, 50, 20, 10, 5, 2, 1};
         int i = d.length - 1;
@@ -16,7 +17,7 @@ public class Change {
 
             if (d[i].getValue() <= n) {
                 ilosc++;
-                mapa.put(d[i], ilosc);
+                map.put(d[i], ilosc);
                 System.out.println(d[i]);
                 n = n - d[i].getValue();
             } else {
@@ -24,7 +25,8 @@ public class Change {
                 ilosc = 0;
             }
         }
-        System.out.println(mapa);
+        System.out.println(map);
+        return map;
     }
 
     public enum Denomination {

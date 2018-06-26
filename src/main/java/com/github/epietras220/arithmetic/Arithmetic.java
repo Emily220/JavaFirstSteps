@@ -22,33 +22,12 @@ public class Arithmetic {
         while (suma <= 10) {
             suma = suma + (1 / i);
             i++;
-
         }
         return i;
     }
 
-    public void romToArab(String a) {
-        RomToArab[] rom = RomToArab.values();
-    }
-
-    public enum RomToArab {
-        THOUSAND("M"), NINE_HUNDRED("CM"), FIVE_HUNDRED("D"), FOUR_HUNDRED("CD"), ONE_HUNDRED("C"),
-        NINETY("XC"), FIVETY("L"), FOURTY("XL"), TEN("X"), NINE("IX"), FIVE("V"), FOUR("IV"), ONE("I");
-
-        private String a;
-
-        RomToArab(String a) {
-            this.a = a;
-        }
-
-        public String getValue() {
-            return a;
-        }
-    }
-
-    public void arabToRom(int k) {
-        ArabToRom[] arab = ArabToRom.values();
-
+    public void arabToRom(int k) { // zad. 4.3
+        RomanNumerals[] arab = RomanNumerals.values();
         int i = 0;
         while (k > 0) {
             if (k >= arab[i].getValue()) {
@@ -60,17 +39,28 @@ public class Arithmetic {
         }
     }
 
-    public enum ArabToRom {
-        M(1000), CM(900), D(500), CD(400), C(100), XC(90), L(50), XL(40), X(10), IX(9), V(5), IV(4), I(1);
+    public void romToArab(String n) { // zad 4.3
+        RomanNumerals[] rzym = RomanNumerals.values();
 
-        private int k;
+        int i = 0;
+        int j = 0;
+        int sum = 0;
+        int length = n.length();
 
-        public int getValue() {
-            return k;
+        while (length>0) {
+            if (n.startsWith(rzym[i].name(), j)) {
+                sum = sum + rzym[i].getValue();
+                j++;
+                length--;
+            } else {
+                i++;
+                if (i == (rzym.length -1)) {
+                    j++;
+                    length--;
+                    i=0;
+                }
+            }
         }
-
-        ArabToRom(int k) {
-            this.k = k;
-        }
+        System.out.println(sum);
     }
 }
