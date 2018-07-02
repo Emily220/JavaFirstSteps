@@ -1,26 +1,35 @@
 package com.github.epietras220.arithmetic;
 
 public class Arithmetic {
-    public double square(double a, double n) { //zad 4.2
+    public double square() { //zad 4.2
 
-        // System.out.println(Math.pow(2018,1.0/2018)); - a w ten sposób po prostu może być?
-
-        double result = a;
-        double tmp = Math.pow(result, (n - 1));
-        double e = 0.000000001;
-
-        while (Math.abs(a - tmp * result) >= e) {
-            result = 1 / n * ((n - 1) * result + (a / tmp));
-            tmp = Math.pow(result, n - 1);
+        double res=0;
+        for (double i = 1.0; i <= 4.0; i++) {
+            res *= Math.pow(i, 1.0/4.0);
         }
-        return result;
+
+
+  //      for (int i = 1; i <= 3; i++) {
+     //       res *= Math.pow(i, -3);
+     //   }
+
+
+//        double result = a;
+//        double tmp = Math.pow(result, (n - 1));
+//        double e = 0.000000001;
+//
+//        while (Math.abs(a - tmp * result) >= e) {
+//            result = 1 / n * ((n - 1) * result + (a / tmp));
+//            tmp = Math.pow(result, n - 1);
+        //}
+        return res;
     }
 
     public int inequality() { // zad 4.1
         double suma = 1;
         int i = 2;
         while (suma <= 10) {
-            suma = suma + (1 / i);
+            suma = suma + (1.0 / i);
             i++;
         }
         return i;

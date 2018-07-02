@@ -5,12 +5,13 @@ public enum RomanNumerals {
 
     private int k;
 
+    RomanNumerals(int k) {
+        this.k = k;
+    }
+
     public int getValue() {
         return k;
     }
 
-    RomanNumerals(int k) {
-        this.k = k;
-    }
 }
 
