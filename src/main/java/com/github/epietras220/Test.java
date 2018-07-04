@@ -9,16 +9,40 @@ import com.github.epietras220.prime.number.Prime;
 import com.github.epietras220.prime.number.SieveOfEratosthenes;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 
 public class Test {
+
+    public static int rozmiarListy(ArrayList<? super Integer> lista){
+        Object x = lista.get(0);
+        return lista.size();
+    }
     public static void main(String[] args) throws IOException {
        // Arithmetic arithmetic = new Arithmetic();
         //System.out.println(arithmetic.square());
 
         //Prime prime = new Prime(0);
-        SieveOfEratosthenes sieve = new SieveOfEratosthenes(100);
-        sieve.sieve();
+        //SieveOfEratosthenes sieve = new SieveOfEratosthenes(100);
+        //sieve.sieve();
+
+        List kolekcjaNiegeneryczna = new ArrayList();
+        kolekcjaNiegeneryczna.add(5);
+        kolekcjaNiegeneryczna.add("kuba");
+        kolekcjaNiegeneryczna.add("ewa");
+
+
+//        for (Object x : kolekcjaNiegeneryczna){
+//            System.out.println(x);
+//        }
+
+        ArrayList<Float> lista = new ArrayList<>();
+        lista.add(5f);
+        lista.add(1f);
+
+
+
 
 
        // System.out.println(Math.pow(2,4.0/3.0));
