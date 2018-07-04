@@ -26,4 +26,13 @@ class Node<E> {
         }
         return next.nodesBehind() + 1;
     }
+
+    public Node<E> addNode(E e) {
+        while (nodesBehind() != 0) {
+            next = next.getNext();  // szukam ostatniego wagonu
+        }
+        next.setNext(new Node<>());
+        return next;
+    }
+
 }

@@ -8,11 +8,12 @@ import java.util.ListIterator;
 
 public class MySingleLinkedList<E> implements List<E> {
 
-    private Node<E> head;
+    private Node<E> head; // wskaźnik pierwszego elementu
+
 
     @Override
     public int size() {
-        if (isEmpty()){
+        if (isEmpty()) {
             return 0;
         }
         return head.nodesBehind() + 1;
@@ -47,7 +48,9 @@ public class MySingleLinkedList<E> implements List<E> {
 
     @Override
     public boolean add(E e) {
-        return false;
+        head.addNode(e);
+
+        return false; // dlaczego tu jest false? powinnam zmienic na true?
     }
 
     @Override
@@ -87,6 +90,10 @@ public class MySingleLinkedList<E> implements List<E> {
 
     @Override
     public E get(int index) {
+        int size = size();
+        while (size>index){
+            size--;
+        } return head.setValue(
         return null;
     }
 
