@@ -4,6 +4,7 @@ import com.github.epietras220.arithmetic.Arithmetic;
 import com.github.epietras220.arithmetic.RomanNumerals;
 import com.github.epietras220.change.Change;
 import com.github.epietras220.leap.years.LeapYears;
+import com.github.epietras220.linked.list.MySingleLinkedList;
 import com.github.epietras220.multiplication.table.MultiplicationTable;
 import com.github.epietras220.prime.number.Prime;
 import com.github.epietras220.prime.number.SieveOfEratosthenes;
@@ -27,23 +28,10 @@ public class Test {
         //SieveOfEratosthenes sieve = new SieveOfEratosthenes(100);
         //sieve.sieve();
 
-        List kolekcjaNiegeneryczna = new ArrayList();
-        kolekcjaNiegeneryczna.add(5);
-        kolekcjaNiegeneryczna.add("kuba");
-        kolekcjaNiegeneryczna.add("ewa");
-
-
-//        for (Object x : kolekcjaNiegeneryczna){
-//            System.out.println(x);
-//        }
-
-        ArrayList<Float> lista = new ArrayList<>();
-        lista.add(5f);
-        lista.add(1f);
-
-
-
-
+        MySingleLinkedList mySingleLinkedList = new MySingleLinkedList();
+        mySingleLinkedList.add("emilka");
+        List<String>
+        System.out.println(mySingleLinkedList);
 
        // System.out.println(Math.pow(2,4.0/3.0));
 

@@ -48,10 +48,19 @@ public class MySingleLinkedList<E> implements List<E> {
 
     @Override
     public boolean add(E e) {
-        head.addNode(e);
-
-        return false; // dlaczego tu jest false? powinnam zmienic na true?
+        // head.addNode(e);
+        if (head == null) {
+            head = new Node<>(e);
+        } else {
+            Node<E> temp = head;
+            while (temp.nodesBehind() != 0) {
+                temp = temp.getNext();  // szukam ostatniego wagonu
+            }
+            temp.setNext(new Node<>(e));
+        }
+        return true;
     }
+
 
     @Override
     public boolean remove(Object o) {
@@ -90,11 +99,22 @@ public class MySingleLinkedList<E> implements List<E> {
 
     @Override
     public E get(int index) {
+//        Node<E> temp = head;
+//        for (int i = 0; i < index; i++) {
+//            if (temp == null) {
+//                throw new IndexOutOfBoundsException(String.valueOf(i));
+//            }
+//            temp = temp.getNext();
+//        }
+//        return temp.getValue();
+        Node<E> temp = head;
         int size = size();
-        while (size>index){
+        while (size > index) {
+            temp = temp.getNext();
             size--;
-        } return head.setValue(
-        return null;
+
+        }
+        return temp.getValue();
     }
 
     @Override
