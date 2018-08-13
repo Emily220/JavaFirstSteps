@@ -79,15 +79,19 @@ public class Test {
         MyArrayList myArrayList = new MyArrayList();
         myArrayList.add("emilka");
         myArrayList.add("ola");
-        myArrayList.add("jas");
-        myArrayList.add("malgosia");
-        myArrayList.add("jacek");
-        myArrayList.add(1, "dawid");
 
-        myArrayList.addAll(2,lista);
+        System.out.println(myArrayList.set(-4, "lala"));
+//        myArrayList.add("jas");
+//        myArrayList.add("malgosia");
+//        myArrayList.add("jacek");
+//        myArrayList.add(1, "dawid");
+
+
+//
+//        myArrayList.addAll(2,lista);
         //System.out.println(myArrayList.subList(2,4));
 
-        System.out.println(myArrayList.size());
+        //System.out.println(myArrayList.get(0));
 
 
 
@@ -95,7 +99,7 @@ public class Test {
 //        System.out.println(myArrayList.get(1));
 //        System.out.println(myArrayList.get(2));
 //        System.out.println(myArrayList.get(3));
-        System.out.println(myArrayList.get(6));
+      //  System.out.println(myArrayList.get(6));
 
         //System.out.println(myArrayList.size());
        // myArrayList.removeAll(lista);

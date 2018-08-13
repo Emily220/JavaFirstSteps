@@ -2,10 +2,9 @@ package com.github.epietras220.list.linked;
 
 import java.util.*;
 
-//public  class MySingleLinkedList<E> implements ArrayList
 public class MySingleLinkedList<E> implements List<E> {
 
-    private Node<E> head; // wskaźnik pierwszego elementu
+    private Node<E> head;
     private int size = 0;
 
     @Override
@@ -150,11 +149,10 @@ public class MySingleLinkedList<E> implements List<E> {
                 head = new Node<>(a);
                 previous = head;
             }
-
             i++;
         }
         previous.setNext(temp);
-
+        size += c.size();
         return true;
     }
 
@@ -199,7 +197,6 @@ public class MySingleLinkedList<E> implements List<E> {
                         }
                     }
                 }
-
             }
         }
         size = size();
@@ -232,7 +229,6 @@ public class MySingleLinkedList<E> implements List<E> {
             }
             temp = temp.getNext();
         }
-
         temp.setValue(element);
         return temp.getValue();
     }
@@ -244,10 +240,10 @@ public class MySingleLinkedList<E> implements List<E> {
         Node<E> previous = null;
         if (index == 0) {
             head = new Node<>(element);
-            head.setNext(temp);
+            previous = head;
+            previous.setNext(temp);
             size += 1;
             return;
-
         }
         for (int i = 0; i < index; i++) {
             if (temp == null) {
@@ -256,7 +252,6 @@ public class MySingleLinkedList<E> implements List<E> {
             previous = temp;
             temp = temp.getNext();
         }
-
         previous.setNext(new Node<>(element));
         previous = previous.getNext();
         previous.setNext(temp);
@@ -283,6 +278,7 @@ public class MySingleLinkedList<E> implements List<E> {
         }
         temp = temp.getNext();
         previous.setNext(temp);
+        size -=1;
         return null;
     }
 

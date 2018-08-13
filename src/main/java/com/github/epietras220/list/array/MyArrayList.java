@@ -21,6 +21,7 @@ public class MyArrayList implements List {
     @Override
     public int size() {
 
+
         return actualSize;
     }
 
@@ -79,14 +80,13 @@ public class MyArrayList implements List {
     @Override
     public boolean addAll(Collection c) {
         Object[] list = c.toArray();
-        while(myArrayList.length - (actualSize + list.length) <= 1){
+        while (myArrayList.length - (actualSize + list.length) <= 1) {
             increaseListLength();
         }
-            for (Object aList : list) {
-                myArrayList[actualSize] = aList;
-                actualSize++;
-            }
-
+        for (Object aList : list) {
+            myArrayList[actualSize] = aList;
+            actualSize++;
+        }
         return true;
     }
 
@@ -250,18 +250,21 @@ public class MyArrayList implements List {
         Object[] list = c.toArray();
         int j = 0;
         int i = 0;
+        if (list.length <= actualSize) {
 
-        while (i < actualSize) {
-            if (myArrayList[i].equals(list[j])) {
-                i++;
-            } else {
-                j++;
-                if (j == list.length + 1) {
-                    return false;
+            while (i < actualSize) {
+                if (myArrayList[i].equals(list[j])) {
+                    i++;
+                } else {
+                    j++;
+                    if (j == list.length) {
+                        return false;
+                    }
                 }
             }
+        } else {
+            return false;
         }
-
         return true;
     }
 
