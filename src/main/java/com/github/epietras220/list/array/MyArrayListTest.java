@@ -357,8 +357,24 @@ class MyArrayListTest {
     }
 
     @Test
-    void removeAll() {
+    void whenSecondListHasTheSameElementsAsFirstList_thenRemoveAllFromFirstList() {
+        //given
+        MyArrayList a = new MyArrayList();
+        MyArrayList list = new MyArrayList();
+
+        a.add("name");
+        a.add("surname");
+
+        list.add("name");
+        list.add("surname");
+
+        //when
+        a.removeAll(list);
+
+        //then
+        assertEquals(0, a.size());
     }
+
 
     @Test
     void whenListContainsAllElementAnotherList_thenMethodContainsAllReturnTrue() {
