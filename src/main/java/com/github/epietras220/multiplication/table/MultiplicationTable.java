@@ -4,7 +4,7 @@ public class MultiplicationTable {
 
     private int[][] table;
 
-    public static void multiplicationTable10() { // zad. 1.1
+    public void multiplicationTable10() { // zad. 1.1
         int count = 0;
         for (int i = 1; i <= 10; i++) {
             for (int j = 1; j <= 10; j++) {

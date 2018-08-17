@@ -2,7 +2,7 @@ package com.github.epietras220.list.array;
 
 import java.util.*;
 
-public class MyArrayList implements List {
+public class MyArrayList<E> implements List<E> {
 
     private Object[] myArrayList;
     private int actualSize = 0;
@@ -114,16 +114,16 @@ public class MyArrayList implements List {
     }
 
     @Override
-    public Object get(int index) {
+    public E get(int index) {
         if (index < actualSize) {
-            return myArrayList[index];
+            return (E) myArrayList[index];
         } else {
             throw new ArrayIndexOutOfBoundsException(index);
         }
     }
 
     @Override
-    public Object set(int index, Object element) {
+    public E set(int index, E element) {
         if (index < actualSize) {
             myArrayList[index] = element;
             return element;
@@ -133,7 +133,7 @@ public class MyArrayList implements List {
     }
 
     @Override
-    public void add(int index, Object element) {
+    public void add(int index, E element) {
         if (index < actualSize) {
             if (myArrayList.length - actualSize >= 1) {
                 System.arraycopy(myArrayList, index, myArrayList, index + 1, actualSize - index);
@@ -150,7 +150,7 @@ public class MyArrayList implements List {
     }
 
     @Override
-    public Object remove(int index) {
+    public E remove(int index) {
         Object object = myArrayList[index];
 
         if (index < actualSize) {
@@ -159,7 +159,7 @@ public class MyArrayList implements List {
         } else {
             throw new ArrayIndexOutOfBoundsException(index);
         }
-        return object;
+        return (E) object;
     }
 
     @Override

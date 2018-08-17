@@ -2,30 +2,39 @@ package com.github.epietras220;
 
 import com.github.epietras220.list.array.MyArrayList;
 import com.github.epietras220.list.linked.MySingleLinkedList;
+import com.github.epietras220.multiplication.table.MultiplicationTable;
+
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Test {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
 
         MySingleLinkedList<String> list = new MySingleLinkedList<>();
         List<String> lista = new ArrayList<>();
+        MultiplicationTable multiplicationTable = new MultiplicationTable();
+       // multiplicationTable.multiplicationTableInTable(10);
+        multiplicationTable.printTable(multiplicationTable.multiplicationTableInTable(10));
+        //multiplicationTable.multiplicationTable10();
+       // MultiplicationTable multiplicationTable = new MultiplicationTable();
 
-        lista.add("emilka");
-        lista.add("jacek");
-        //lista.add("lukasz");
-       // lista.add("piotrek");
-        lista.add("emilka");
-       //lista.add("pro");
 
-        list.add("emilka");
-        list.add("jacek");
-        list.add("lukasz");
-        list.add("piotrek");
-        list.add("emilka");
-        list.add("kinga");
+
+//        lista.add("emilka");
+//        lista.add("jacek");
+//        //lista.add("lukasz");
+//       // lista.add("piotrek");
+//        lista.add("emilka");
+//       //lista.add("pro");
+//
+//        list.add("emilka");
+//        list.add("jacek");
+//        list.add("lukasz");
+//        list.add("piotrek");
+//        list.add("emilka");
+//        list.add("kinga");
 
         //list.subList(2,4);
         //System.out.println(list.get(1));
@@ -80,7 +89,7 @@ public class Test {
         myArrayList.add("emilka");
         myArrayList.add("ola");
 
-        System.out.println(myArrayList.set(-4, "lala"));
+        //System.out.println(myArrayList.set(-4, "lala"));
 //        myArrayList.add("jas");
 //        myArrayList.add("malgosia");
 //        myArrayList.add("jacek");
