@@ -9,7 +9,7 @@ import java.util.List;
 
 abstract class AbstractFileReader implements FileReader {
 
-    private static String PATH = "C:\\ToDoList\\storage";
+    private static String PATH = "C:\\ToDoList";
 
     File getFile(String path) {
         if (path == null) {
@@ -21,13 +21,13 @@ abstract class AbstractFileReader implements FileReader {
     }
 
     @Override
-    public List<Entry> getToDoListEntries(String key, String path) throws IOException {
+    public List<Entry> getToDoListEntries(String path) throws IOException {
         List<Entry> result = new ArrayList<>();
         List<String> lines = read(path);
 
         for (String line : lines) {
-            Entry passwordEntry = new Entry(line, ";");
-            result.add(passwordEntry);
+            Entry entry = new Entry(line, ";");
+            result.add(entry);
         }
         return result;
     }

@@ -5,5 +5,5 @@ import java.util.List;
 
 interface FileReader {
     List<String> read(String path) throws IOException;
-    List<Entry> getToDoListEntries(String key, String path) throws IOException;
+    List<Entry> getToDoListEntries(String path) throws IOException;
 }

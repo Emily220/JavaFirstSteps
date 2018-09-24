@@ -20,10 +20,34 @@ public class Entry {
         String[] split = csvString.split(sep);
         this.uuid = split[0];
         this.createdAt = LocalDateTime.parse(split[1], formatter);
-        //TODO - reszta pól
-
+        this.task = split[2];
+        this.completed = Boolean.parseBoolean(split[3]);
+        this.deadline = LocalDateTime.parse(split[4], formatter);
     }
 
+    public static DateTimeFormatter getFormatter() {
+        return formatter;
+    }
+
+    public String getUuid() {
+        return uuid;
+    }
+
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
+    }
+
+    public String getTask() {
+        return task;
+    }
+
+    public boolean isCompleted() {
+        return completed;
+    }
+
+    public LocalDateTime getDeadline() {
+        return deadline;
+    }
 
     public String toCsvString(String sep) {
         return new StringBuilder()
@@ -34,19 +58,20 @@ public class Entry {
                 .append(task)
                 .append(sep)
                 .append(completed)
+                .append(sep)
                 .append(deadline.format(formatter))
                 .toString();
     }
 
     public void complete() {
-        //todo
+        completed = true;
+
+        //todo - do sprawdzenia
     }
 
     public void extendDeadline(int days) {
-        //todo
+        deadline = deadline.plusDays(days);
+
+        //todo - do sprawdzenia
     }
-
-    //TODO gettery
-
-
 }

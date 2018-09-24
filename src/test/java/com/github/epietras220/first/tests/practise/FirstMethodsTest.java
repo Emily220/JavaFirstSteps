@@ -1,9 +1,7 @@
-package com.github.epietras220.my.first.tests;
+package com.github.epietras220.first.tests.practise;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import java.time.Duration;
 import java.util.*;
 import java.util.function.BooleanSupplier;
 

@@ -16,8 +16,6 @@ public class LeapYears {
 
         long diff = endDate.getTimeInMillis() - startDate.getTimeInMillis();
 
-//        Calendar result = Calendar.getInstance();
-//        result.setTimeInMillis(diff);
         long liczbaMsWDobie = 1000 * 60 * 60 * 24;
 
         return diff / liczbaMsWDobie;

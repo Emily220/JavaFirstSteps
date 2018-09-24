@@ -9,12 +9,6 @@ import java.util.Collection;
 import static org.junit.jupiter.api.Assertions.*;
 
 class MyArrayListTest {
-//    MyArrayList a;
-//
-//    @BeforeEach
-//    void setup() {
-//        a = new MyArrayList();
-//    }
 
     @Test
     void whenArrayIsEmpty_thenTrue() {
